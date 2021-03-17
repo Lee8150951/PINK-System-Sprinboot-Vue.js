@@ -1,0 +1,68 @@
+.back-body {
+  height: 100%;
+  padding: 10% 25%;
+  background-color: #f5f5f5;
+}
+.main {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: -5px 5px 15px #e5e5e5;
+}
+.left-content {
+  padding: 25% 20px;
+}
+.left-content-register {
+  padding: 45% 20px;
+}
+.left-bg {
+  width: 100%;
+}
+.right-content {
+  padding: 25px 80px;
+}
+.title {
+  text-align: center;
+}
+.left-title {
+  font-weight: 900;
+  font-size: 25px;
+  color: #4c4c64;
+  margin-right: 5px;
+}
+.right-title {
+  font-weight: 900;
+  font-size: 25px;
+}
+.form-item {
+  margin-top: 35px;
+}
+.form-item /deep/ input {
+  border-radius: 0;
+}
+.sub-btn {
+  width: 100%;
+  border-radius: 0;
+}
+.another-log {
+  margin-top: 8px;
+  text-align: right;
+}
+.another-btn {
+  color: #c4c4c4;
+  font-size: 12px;
+}
+.left-span {
+  float: left;
+}
+.pink {
+  color: #F56C6C;
+}
+.orange {
+  color: #E6A23C;
+}
+.green {
+  color: #67C23A;
+}
+.blue {
+  color: #409EFF;
+}

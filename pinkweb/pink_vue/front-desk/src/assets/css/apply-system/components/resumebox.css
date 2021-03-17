@@ -1,0 +1,16 @@
+.resume-body {
+  padding: 0 15px;
+  margin-bottom: 50px;
+}
+.resume-content {
+  text-align: center;
+}
+.resume-name {
+  font-size: 15px;
+  font-weight: lighter;
+  margin-top: 10px;
+  line-height: 35px;
+}
+.img-col {
+  position: relative;
+}

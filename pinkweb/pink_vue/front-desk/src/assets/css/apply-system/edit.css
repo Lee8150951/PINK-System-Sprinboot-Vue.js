@@ -1,0 +1,116 @@
+.edit-body {
+  padding: 20px 12%;
+}
+.left-content {
+  background-color: #fff;
+  margin-right: 16px;
+  box-shadow: -5px 5px 15px #e2e2e2;
+  padding-bottom: 20px;
+}
+.left-header {
+  padding: 16px 30px;
+  border-bottom: 1px solid #f6f6f8;
+}
+.left-header-title {
+  font-weight: bolder;
+  color: #404040;
+  font-size: 15px;
+}
+.left-header-btn {
+  float: right;
+  margin-right: 20px;
+}
+.header-btn {
+  padding: 0;
+  color: #E6A23C;
+}
+.base-info {
+  background-color: #f8f9fb;
+  padding: 16px 30px;
+}
+.base-info h4 {
+  font-size: 16px;
+  font-weight: normal;
+}
+.left-info {
+  padding-right: 15px;
+}
+.info-body {
+  margin-top: 5px;
+}
+.info-panel {
+  margin-top: 15px;
+}
+.info-title {
+  font-size: 14px;
+  font-weight: lighter;
+}
+.info-btn-panel {
+  margin-top: 8px;
+}
+/deep/ .el-input__inner {
+  border-radius: 0;
+}
+.info-radio {
+  border-radius: 0;
+  width: 40%;
+  background-color: #fff;
+}
+.right-info {
+  padding-left: 15px;
+}
+.el-select {
+  width: 100%;
+}
+.info-sub {
+  text-align: right;
+  margin-top: 25px;
+}
+.info-btn-sub {
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 0;
+}
+.message-panel_1 {
+  margin-top: 15px;
+}
+.message-panel {
+  padding: 6px 30px;
+}
+.message-title {
+  font-size: 15px;
+  font-weight: bold;
+  border-left: 4px solid #E6A23C;
+  padding-left: 6px;
+}
+.message-body {
+  margin-top: 10px;
+}
+.message-card {
+  border: 0;
+  font-weight: lighter;
+  font-size: 15px;
+}
+.message-span {
+  padding: 0 10px;
+  border-right: 3px solid #e3e3e3;
+  font-size: 13px;
+}
+.message-span_2 {
+  padding: 0 10px;
+  font-size: 13px;
+}
+.message-card span i {
+  padding-right: 5px;
+}
+.add-btn {
+  padding: 0;
+  float: right;
+  color: #E6A23C;
+}
+.el-card {
+  cursor: pointer;
+}
+.cascader-col {
+  width: 100%;
+}

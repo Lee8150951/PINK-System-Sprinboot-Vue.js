@@ -1,0 +1,16 @@
+.feature-li {
+  padding: 20px 20px 20px 35px;
+  color: #6c6c6c;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.feature-i {
+  color: #c1c1c1;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.right-feature {
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 14px;
+}

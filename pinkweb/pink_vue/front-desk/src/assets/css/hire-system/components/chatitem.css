@@ -1,0 +1,13 @@
+.middle-content {
+  padding: 0 10px;
+}
+.chat-box {
+  max-width: 350px;
+  padding: 10px;
+  background-color: #f3f3f3;
+  font-size: 13px;
+  border-radius: 8px;
+}
+.chat-main {
+  margin-bottom: 15px;
+}

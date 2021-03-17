@@ -1,0 +1,19 @@
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  min-height: 400px;
+}
+.el-input {
+  width: 70%;
+}
+.el-textarea {
+  width: 90%;
+}
+.sub-btn {
+  float: right;
+  margin-right: 10%;
+}

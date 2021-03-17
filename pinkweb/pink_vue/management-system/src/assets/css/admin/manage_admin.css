@@ -1,0 +1,11 @@
+.left-buttons {
+  float: left;
+  line-height: 0;
+}
+.right-research {
+  float: right;
+  line-height: 0;
+}
+.foot-button {
+  float: right;
+}

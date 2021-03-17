@@ -1,0 +1,11 @@
+.feature-li {
+  color: #959ba1;
+  padding: 16px 40px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.feature-icon {
+  margin-right: 10px;
+}

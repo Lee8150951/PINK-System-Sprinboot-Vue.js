@@ -1,0 +1,75 @@
+/*清除元素默认的内外边距  */
+* {
+  margin: 0;
+  padding: 0;
+  /* CSS3盒子模型 */
+  box-sizing: border-box;
+}
+html, body, #app, .el-container {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+/*让所有斜体 不倾斜*/
+em,i {
+  font-style: normal;
+}
+/*去掉列表前面的小点*/
+li {
+  list-style: none;
+}
+/*图片没有边框   去掉图片底侧的空白缝隙*/
+img {
+  border: 0;  /*ie6*/
+  vertical-align: middle;
+}
+/*颜色*/
+.bg-green {
+  background-color: #67C23A;
+}
+.bg-red {
+  background-color: #F56C6C;
+}
+.bg-orange {
+  background-color: #E6A23C;
+}
+.bg-blue {
+  background-color: #409EFF;
+}
+.bg-grey {
+  background-color: #909399;
+}
+/*统一占位*/
+.occupied-content {
+  height: 100px;
+}
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar{
+  width: 7px;
+  height: 7px;
+  background-color: #F5F5F5;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  background-color: #c8c8c8;
+}
+/*禁止textarea拖动*/
+.el-textarea__inner{
+  resize: none;
+}
+
+* {
+  user-select:none;
+}

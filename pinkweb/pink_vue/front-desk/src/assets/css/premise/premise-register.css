@@ -1,0 +1,25 @@
+.form-item {
+  margin-top: 20px;
+}
+.r-btn {
+  margin-bottom: 15px;
+}
+.form-radio {
+  border-radius: 0;
+  width: 100%;
+}
+.form-time {
+  width: 100%;
+}
+.left-btn-col {
+  padding-right: 5px;
+}
+.right-btn-col {
+  padding-left: 5px;
+}
+.select-col {
+  width: 100%;
+}
+.cascader-col {
+  width: 100%;
+}

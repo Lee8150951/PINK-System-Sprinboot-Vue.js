@@ -1,0 +1,62 @@
+.post-item {
+  min-height: 100px;
+  background-color: #fff;
+  box-shadow: -5px 5px 15px #e5e5e5;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.post-item:hover {
+  box-shadow: -5px 5px 15px #adadad;
+  transition: 0.5s;
+}
+.header-content {
+  min-height: 100px;
+  padding: 20px 30px;
+}
+.bottom-content {
+  background-color: #f8f9fc;
+}
+.footer-content {
+  min-height: 40px;
+  line-height: 40px;
+}
+.el-tag {
+  margin-left: 10px;
+}
+.welfare {
+  font-size: 13px;
+  float: right;
+  line-height: 40px;
+  margin-right: 30px;
+}
+.job-name {
+  color: #E6A23C;
+  font-weight: bold;
+}
+.header-content li {
+  margin-top: 8px;
+}
+.salary {
+  color: #409EFF;
+  padding: 0 10px 0 0;
+  border-right: 3px solid #cdcdcd;
+}
+.company-name {
+  color: #E6A23C;
+}
+.job-info {
+  font-size: 13px;
+}
+.company-info {
+  font-size: 13px;
+}
+.company-info span {
+  padding-right: 10px;
+}
+.company-logo-img {
+  height: 60px;
+  float: right;
+  margin-right: 30px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+}

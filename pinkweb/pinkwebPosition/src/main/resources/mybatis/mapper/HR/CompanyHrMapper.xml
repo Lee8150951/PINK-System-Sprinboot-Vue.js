@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace=绑定一个指定的Dao/Mapper接口-->
+<mapper namespace="com.work.pinkweb.HR.Mapper.CompanyHrMapper">
+    <resultMap id="CompanyHrEntityMap" type="com.work.pinkweb.Entity.CompanyHr">
+        <id column="ehr_id" property="ehr_id" jdbcType="BIGINT"/>
+        <result property="ehr_applyaccount" column="ehr_applyaccount"/>
+        <result property="ehr_currentaccount" column="ehr_currentaccount"/>
+        <result property="ehr_collect" column="ehr_collect"/>
+        <result property="ehr_vipauthority" column="ehr_vipauthority"/>
+        <result property="ehr_jobnum" column="ehr_jobnum"/>
+        <result property="ehr_vx" column="ehr_vx"/>
+        <result property="ehr_position" column="ehr_position"/>
+        <result property="is_delete" column="is_delete"/>
+        <association property="company" javaType="com.work.pinkweb.Entity.Company">
+           <id column="e_id" property="e_id" jdbcType="BIGINT"/>
+           <result property="e_name" column="e_name"/>
+        </association>
+        <association property="user" javaType="com.work.pinkweb.Entity.User">
+            <id column="id" property="id" jdbcType="BIGINT"/>
+            <result property="name" column="name"/>
+            <result property="avatar" column="avatar"/>
+            <result property="phone" column="phone"/>
+            <result property="sex" column="sex"/>
+            <result property="birthday" column="birthday"/>
+            <result property="email" column="email"/>
+        </association>
+        <collection  property="recruitmentList" ofType="com.work.pinkweb.Entity.Recruitment">
+            <id property="r_id" column="r_id" jdbcType="BIGINT" />
+            <result property="ehrid" column="ehrid"/>
+    </collection>
+    </resultMap>
+
+    <select id="getCompanyHrAllInfo" resultMap="CompanyHrEntityMap">
+        select eh.*, u.*,u.avatar,ri.*,ei.*
+        from enterprise_hr eh
+        left join user u on eh.ehr_id=u.id
+        left join enterprise_info ei on ei.e_id=eh.enterprise_id
+        left join recruitment_info ri on eh.ehr_id=ri.ehrid
+
+        where ehr_id=#{ehr_id}
+    </select>
+    <update id="updateHrInfo" parameterType="com.work.pinkweb.Entity.CompanyHr">
+        update enterprise_hr set ehr_vx=#{ehr_vx},ehr_position=#{ehr_position}
+        where ehr_id=#{ehr_id}
+    </update>
+    <update id="updateHrPhone" parameterType="com.work.pinkweb.Entity.CompanyHr">
+        update enterprise_hr eh left join user u on u.id=eh.ehr_id set phone=#{phone}
+        where ehr_id=#{ehr_id}
+    </update>
+
+
+
+
+</mapper>

@@ -1,0 +1,29 @@
+.overview-content {
+  border-right: 1px solid #e3e3e3;
+  height: 120px;
+  padding: 0 40px;
+  cursor: pointer;
+}
+.overview-num {
+  font-size: 60px;
+  font-weight: lighter;
+  color: #6b6b6b;
+}
+.icon-content {
+  font-size: 25px;
+  margin-top: 3px;
+  color: #575757;
+}
+.top-title-content {
+  font-weight: bold;
+  font-size: 16px;
+  color: #575757;
+}
+.bottom-title-content {
+  font-weight: lighter;
+  font-size: 13px;
+  color: #bfbfbf;
+}
+.right-col {
+  padding-left: 10px;
+}

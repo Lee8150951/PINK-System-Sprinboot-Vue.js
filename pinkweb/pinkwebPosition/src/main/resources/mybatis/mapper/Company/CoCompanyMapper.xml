@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace=绑定一个指定的Dao/Mapper接口-->
+<mapper namespace="com.work.pinkweb.Company.Mapper.CoCompanyMapper">
+    <resultMap id="CompanyEntityMap" type="com.work.pinkweb.Entity.Company">
+        <id column="e_id" property="e_id" jdbcType="BIGINT"/>
+        <result property="e_name" column="e_name"/>
+        <result property="e_type" column="e_type"/>
+        <result property="e_address" column="e_address"/>
+        <result property="e_operationstatus" column="e_operationstatus"/>
+        <result property="e_introduction" column="e_introduction"/>
+        <result property="e_businessscope" column="e_businessscope"/>
+        <result property="e_size" column="e_size"/>
+        <result property="e_registeredcapital" column="e_registeredcapital"/>
+        <result property="e_legalrepresentative" column="e_legalrepresentative"/>
+        <result property="e_registeredaddress" column="e_registeredaddress"/>
+        <result property="e_executive" column="e_executive"/>
+        <result property="e_position" column="e_position"/>
+        <result property="e_establishtime" column="e_establishtime"/>
+        <result property="e_operationstatus" column="e_operationstatus"/>
+        <result property="e_registeredaddress" column="e_registeredaddress"/>
+        <result property="e_unifiedcreditcode" column="e_unifiedcreditcode"/>
+        <result property="e_introduction" column="e_introduction"/>
+        <result property="e_executive_intro" column="e_executive_intro"/>
+        <result property="e_logo" column="e_logo"/>
+        <result property="e_licenseimg" column="e_licenseimg"/>
+
+    </resultMap>
+
+    <update id="updateCompanyAvatar"  parameterType="com.work.pinkweb.Entity.Company">
+        update enterprise_info SET e_logo=#{e_logo}
+        where e_id=#{e_id}
+    </update>
+    <update id="uploadLicenseImg"  parameterType="com.work.pinkweb.Entity.Company">
+        update enterprise_info  SET e_licenseimg=#{param1}
+        where e_id=#{param2}
+    </update>
+    <update id="updateCompanyInfo"  parameterType="com.work.pinkweb.Entity.Company">
+        update enterprise_info SET  e_name=#{e_name},
+        e_type=#{e_type},
+        e_address=#{e_address},
+        e_operationstatus=#{e_operationstatus},
+        e_introduction=#{e_introduction},
+        e_businessscope=#{e_businessscope},
+        e_size=#{e_size},
+        e_registeredcapital=#{e_registeredcapital},
+        e_legalrepresentative=#{e_legalrepresentative},
+        e_registeredaddress=#{e_registeredaddress},
+        e_executive=#{e_executive},
+        e_position=#{e_position},
+        e_establishtime=#{e_establishtime},
+        e_operationstatus=#{e_operationstatus},
+        e_registeredaddress=#{e_registeredaddress},
+        e_unifiedcreditcode=#{e_unifiedcreditcode},
+        e_introduction=#{e_introduction},
+        e_executive_intro=#{e_executive_intro},
+        e_logo=#{e_logo},
+        e_licenseimg=#{e_licenseimg}
+        where e_id=#{e_id}
+    </update>
+
+
+</mapper>

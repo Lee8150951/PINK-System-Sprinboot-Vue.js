@@ -1,0 +1,128 @@
+.detail-header {
+  height: 150px;
+  background-color: #33cbcc;
+  padding: 20px 11%;
+}
+.header-content {
+  height: 150px;
+}
+.company-logo {
+  width: 100px;
+  border-radius: 10px;
+  float: left;
+}
+.c-info {
+  margin-left: 10px;
+  padding-left: 120px;
+  padding-top: 15px;
+}
+.c-info h2 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: normal;
+}
+.c-info p {
+  color: #efefef;
+  font-size: 13px;
+}
+.c-intro-main {
+  font-weight: lighter;
+}
+.p-info-top {
+  color: white;
+  text-align: right;
+}
+.p-info-top h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+.p-info-top p {
+  font-size: 14px;
+}
+.p-resume {
+  text-align: right;
+  margin-top: 15px;
+}
+.resume-btn {
+  padding: 8px 13%;
+  border-radius: 0;
+}
+.c-main {
+  padding: 30px 150px;
+  background-color: #fff;
+}
+.left-content {
+  padding-right: 60px;
+  border-right: 1px solid #e8e8e8;
+}
+.left-content h3 {
+  border-left: 5px solid #E6A23C;
+  padding-left: 8px;
+  font-size: 16px;
+  color: #424a64;
+  margin-top: 20px;
+}
+.left-content p {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 43px;
+}
+.collapse {
+  margin-top: 24px;
+}
+.el-collapse-item__header {
+  font-size: 20px;
+}
+.p-items {
+  margin-top: 30px;
+}
+.right-content {
+  min-height: 20px;
+  padding-left: 20px;
+}
+.right-content h3 {
+  border-left: 5px solid #E6A23C;
+  padding-left: 8px;
+  font-size: 16px;
+  color: #424a64;
+  margin-top: 20px;
+}
+.exe-content {
+  text-align: left;
+  margin-top: 20px;
+}
+.executive {
+  border-radius: 50%;
+  height: 70px;
+}
+.boss-info-content {
+  margin-top: 20px;
+}
+.boss-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+.boss-job {
+  margin-top: 16px;
+  font-size: 14px;
+}
+.boss-info {
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 32px;
+  margin-top: 10px;
+}
+.environ-img {
+  height: 250px;
+}
+.environ-block {
+  margin-top: 20px;
+}
+.avatar-btn-content {
+  text-align: center;
+  margin-top: 15px;
+}
+.avatar-btn {
+  border-radius: 0;
+  padding: 10px 25%;
+}

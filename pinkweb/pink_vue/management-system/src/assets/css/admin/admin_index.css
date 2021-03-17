@@ -1,0 +1,77 @@
+.welcome {
+  background-color: #ffffff;
+  padding: 50px 30px 40px 50px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.greet-panel {
+  margin-top: 5px;
+}
+.wel_logo {
+  height: 70%;
+  width: 70%;
+}
+.main-body {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+.feature-btn {
+  float: right;
+  margin-right: 10px;
+}
+.left-body {
+  height: 530px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  position: relative;
+}
+.right-body {
+  height: 530px;
+  margin-left: 20px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+}
+.panel-title {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 20px;
+  font-size: 14px;
+  color: #8c9e9c;
+  font-weight: bold;
+}
+.more-btn {
+  float: right;
+  padding: 0;
+  margin-top: 3px;
+  font-size: 13px;
+  color: #67C23A;
+}
+.more-btn_1 {
+  position: absolute;
+  bottom: 18px;
+  right: 30px;
+  color: #4c4c64;
+  padding: 0;
+  font-weight: bold;
+  font-size: 13px;
+}
+.progress-panel {
+  padding: 20px 20px 0 40px;
+}
+.tips-name {
+  color: #b7bbbc;
+  font-size: 12px;
+  margin-left: 13px;
+  margin-top: 5px;
+}
+.change-num {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #2bcd70;
+  text-align: right;
+}
+.change-title {
+  font-size: 14px;
+  color: #b6babb;
+  margin-top: 5px;
+  text-align: right;
+}

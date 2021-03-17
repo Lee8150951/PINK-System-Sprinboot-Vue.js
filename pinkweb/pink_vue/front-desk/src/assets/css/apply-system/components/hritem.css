@@ -1,0 +1,27 @@
+.hr-li {
+  margin-top: 20px;
+  padding-left: 10px;
+  border-bottom: 1px solid #eeeeee;
+  height: 72px;
+}
+.avatar-img {
+  border-radius: 50%;
+  height: 60px;
+}
+.avatar-content {
+  line-height: 28px;
+}
+.avatar-b {
+  font-size: 14px;
+}
+.b-name {
+  padding-right: 10px;
+  border-right: 3px #dedede solid;
+}
+.b-job {
+  margin-left: 7px;
+}
+.b-state {
+  font-size: 13px;
+  color: #61687c;
+}

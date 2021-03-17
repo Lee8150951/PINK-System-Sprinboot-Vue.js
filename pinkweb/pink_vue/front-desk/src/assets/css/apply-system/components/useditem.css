@@ -1,0 +1,20 @@
+.used {
+  background-color: #ffffff;
+  padding-top: 12px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.used-top {
+  font-size: 14px;
+}
+.used-bottom {
+  margin-top: 6px;
+  font-size: 12px;
+  height: 25px;
+  border-bottom: 1px solid #eaeaea;
+  color: #bdbdbd;
+}
+.used-top-right {
+  float: right;
+  color: #E6A23C;
+}

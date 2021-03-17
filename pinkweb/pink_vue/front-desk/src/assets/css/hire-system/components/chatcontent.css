@@ -1,0 +1,54 @@
+.right-header {
+  padding: 20px 0 8px 20px;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 17px;
+  font-weight: bold;
+  color: #4c4c64;
+}
+.left-body {
+  border-right: 1px solid #e3e3e3;
+  height: 547px;
+}
+.enter-box {
+  border-top: 1px solid #dedede;
+}
+.content-body {
+  height: 420px;
+  border-bottom: 1px solid #dedede;
+  padding: 20px;
+  overflow: auto;
+}
+.enter-text {
+  border: 0;
+  resize: none;
+  overflow: hidden
+}
+.enter-text>>>.el-input__inner {
+  border: 0;
+}
+.enter-text>>>.el-textarea__inner {
+  border: 0;
+  resize: none;
+}
+.communicate-sub {
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.right-chat-body {
+  text-align: center;
+}
+.rc-title_1 {
+  margin-top: 150px;
+  font-size: 14px;
+  font-weight: lighter;
+}
+.qr-code {
+  margin-top: 10px;
+  width: 50%;
+}
+.rc-title_2 {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: lighter;
+}

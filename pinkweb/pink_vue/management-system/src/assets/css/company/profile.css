@@ -1,0 +1,94 @@
+.profile-body {
+  padding: 0 40px;
+}
+.left-content {
+  height: 620px;
+  border: 1px solid #e7e7e7;
+  background-color: #fff;
+}
+.right-content {
+  height: 620px;
+  border: 1px solid #e7e7e7;
+  background-color: #fff;
+  margin-left: 10px;
+  padding: 0 30px;
+}
+.lt-content {
+  height: 400px;
+  background: url("../../../assets/img/back/profile-bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+.company-logo-col {
+  position: relative;
+}
+.occupy {
+  position: absolute;
+  margin: auto;
+  top: 130px;bottom: 0;right: 0;left: 0;
+  height: 90px;
+  width: 90px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 13px;
+  opacity: 0;
+  line-height: 90px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.logo-img {
+  margin-top: 130px;
+  border-radius: 50%;
+  width: 100px;
+  border: 5px solid #ffffff;
+}
+.company-name {
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+  margin-top: 30px;
+}
+.lb-content {
+  padding: 20px 40px 20px 40px;
+}
+.info-tips {
+  padding: 10px 0;
+}
+.tip-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4c4c64;
+}
+.tip-content {
+  font-weight: lighter;
+  font-size: 14px;
+  color: #4c4c64;
+}
+.right-title {
+  padding: 25px 0;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.left-form-content {
+  height: 500px;
+  border-right: 1px solid #dedede;
+  padding-right: 20px;
+}
+.right-form-content {
+  padding-left: 20px;
+}
+.upload-btn {
+  border-radius: 0;
+  padding-left: 210%;
+  padding-right: 210%;
+}
+.edit-btn {
+  float: right;
+  border-radius: 0;
+  margin-top: 6px;
+  padding: 10px 44%;
+}
+.upload-div {
+  text-align: center;
+}

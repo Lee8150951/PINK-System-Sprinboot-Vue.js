@@ -1,0 +1,42 @@
+.item-content {
+  height: 80px;
+  cursor: pointer;
+  padding-left: 30px;
+  padding-top: 10px;
+  transition: 0.3s;
+}
+.left-item-content {
+  text-align: left;
+  padding-top: 10px;
+}
+.left-item-content h4 {
+  color: #33cbcc;
+  font-weight: bold;
+}
+.p-info-detail {
+  margin-left: 10px;
+  font-size: 13px;
+}
+.left-item-content p {
+  margin-top: 3px;
+  font-size: 13px;
+}
+.salary {
+  color: #e58a04;
+  font-size: 13px;
+}
+.right-item-content {
+  line-height: 80px;
+  text-align: right;
+  padding-right: 30px;
+}
+.right-item-content span {
+  font-size: 13px;
+}
+.p-boss {
+  padding-right: 10px;
+  border-right: 2px solid #d7d7d7;
+}
+.p-job {
+  padding-left: 10px;
+}

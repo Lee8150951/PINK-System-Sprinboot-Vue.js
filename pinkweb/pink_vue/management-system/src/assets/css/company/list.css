@@ -1,0 +1,38 @@
+.list-col {
+  padding: 20px 40px;
+  margin: 0 40px;
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+}
+.feature-bar {
+  float: right;
+  margin-right: 10px;
+}
+.feature-btn {
+  border-radius: 0;
+  padding: 10px 20px;
+}
+.page-peddle {
+  margin-top: 17px;
+}
+.left-form {
+  border-right: 1px solid #e8e8e8;
+  padding: 0 20px;
+}
+.input-name {
+  margin-top: 10px;
+}
+.input-li {
+  padding: 10px 0;
+}
+.right-form {
+  padding: 0 20px;
+}
+.select-input {
+  width: 100%;
+}
+.sub-col {
+  margin-top: 10px;
+  text-align: right;
+  margin-right: 20px;
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace=绑定一个指定的Dao/Mapper接口-->
+<mapper namespace="com.work.pinkweb.HR.Mapper.ApplyMapper">
+    <resultMap id="ApplyEntityMap"
+               type="com.work.pinkweb.Entity.Apply">
+        <id column="apply_id" property="apply_id" jdbcType="BIGINT"/>
+        <result property="uid" column="uid"/>
+        <result property="p_id" column="p_id"/>
+        <result property="created_time" column="created_time"/>
+        <result property="is_delete" column="is_delete"/>
+        <result property="r_id" column="r_id"/>
+        <association property="candidate" javaType="com.work.pinkweb.Entity.Candidate">
+            <id column="c_id" property="c_id" jdbcType="BIGINT"/>
+            <result property="c_type" column="c_type"/>
+            <result property="c_fdegree" column="c_fdegree"/>
+            <result property="c_fschool" column="c_fschool"/>
+            <result property="c_exsalary" column="c_exsalary"/>
+            <result property="c_excity" column="c_excity"/>
+            <result property="c_fmajor" column="c_fmajor"/>
+            <result property="c_ftime" column="c_ftime"/>
+            <result property="c_sschool" column="c_sschool"/>
+            <result property="c_sdegree" column="c_sdegree"/>
+            <result property="c_smajor" column="c_smajor"/>
+            <result property="c_stime" column="c_stime"/>
+            <result property="c_finternship_enterprise" column="c_finternship_enterprise"/>
+            <result property="c_finternship_job" column="c_finternship_job"/>
+            <result property="c_finternship_stime" column="c_finternship_etime"/>
+            <result property="c_finternship_etime" column="c_finternship_etime"/>
+            <result property="c_sinternship_enterprise" column="c_sinternship_enterprise"/>
+            <result property="c_sinternship_job" column="c_sinternship_job"/>
+            <result property="c_sinternship_stime" column="c_sinternship_stime"/>
+            <result property="c_sinternship_etime" column="c_sinternship_etime"/>
+            <result property="total" column="count(*)"/>
+
+
+            <association property="user" javaType="com.work.pinkweb.Entity.User">
+                <id column="id" property="id" jdbcType="BIGINT"/>
+                <result property="avatar" column="avatar"/>
+                <result property="name" column="name"/>
+                <result property="email" column="email"/>
+                <result property="phone" column="phone"/>
+                <result property="sex" column="sex"/>
+            </association>
+        </association>
+        <association property="resume" javaType="com.work.pinkweb.Entity.Resume">
+            <id column="resume_id" property="resume_id" jdbcType="BIGINT"/>
+            <result property="url" column="url"/>
+        </association>
+        <association property="recruitment" javaType="com.work.pinkweb.Entity.Recruitment">
+            <id column="r_id" property="r_id" jdbcType="BIGINT"/>
+            <result property="ehrid" column="ehrid"/>
+            <result property="r_name" column="r_name"/>
+            <result property="r_salary" column="r_salary"/>
+            <result property="r_experience" column="r_experience"/>
+            <result property="r_education" column="r_education"/>
+            <result property="r_address" column="r_address"/>
+            <result property="r_timetag" column="r_timetag"/>
+            <result property="r_tag" column="r_tag"/>
+        </association>
+    </resultMap>
+
+    <select id="getAllApply" resultMap="ApplyEntityMap">
+        select  a.*,c.c_fdegree,c.c_fschool,c.c_sdegree,c.c_sschool,c.c_exsalary,ri.r_name,ri.ehrid,u.name,ri.r_id
+        from apply a
+                 left join candidate c on a.u_id=c.c_id
+                 left join recruitment_info ri on a.p_id=ri.r_id
+                 left join user u on a.u_id=u.id
+        where ehrid=#{ehrid}
+    </select>
+
+    <delete id="deleteApplyById" parameterType="int">
+
+        delete  from apply where
+            apply_id =#{apply_id}
+    </delete>
+    <select id="getCandidateByApply" resultMap="ApplyEntityMap">
+        select  a.*,u.*,c.*,r.url
+        from apply  a
+                 left JOIN   candidate c  on c.c_id=a.u_id
+                 left JOIN   user u on u.id=a.u_id
+                 left  join resume r on r.resume_id=a.r_id
+        where apply_id=#{apply_id}
+    </select>
+    <select id="getLineByDate" resultMap="ApplyEntityMap">
+        select * from apply where  created_time like CONCAT(CONCAT('%',#{param1}),'%') and p_id=#{param2}
+    </select>
+
+
+
+
+
+</mapper>

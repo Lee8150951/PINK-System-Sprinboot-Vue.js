@@ -1,0 +1,85 @@
+.el-col {
+  border-radius: 2px;
+}
+.bg-purple-dark {
+  background: #99a9bf;
+}
+.grid-content {
+  min-height: 600px;
+  background-image: linear-gradient(#1de1ad, #04b0e6);
+  border: 1px solid #eaeaea;
+}
+.left-content {
+  float: left;
+  position: relative;
+}
+.el-avatar {
+  height: 150px;
+  width: 150px;
+  margin-left: 115px;
+  margin-top: 80px;
+}
+.left-content h2 {
+  margin-left: 140px;
+  margin-top: 20px;
+  font-size: 30px;
+  color: white;
+}
+.right-content {
+  float: right;
+  height: 600px;
+  width: 850px;
+  background-color: #ffffff;
+}
+.info {
+  margin-left: 100px;
+  margin-top: 80px;
+}
+.left-info, .right-info {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+.left-info {
+  float: left;
+}
+.right-info {
+  float: right;
+}
+.left-info li {
+  height: 40px;
+}
+.right-info li {
+  height: 40px;
+}
+.tip-content {
+  min-height: 100px;
+  border-radius: 8px;
+  margin-left: 45px;
+  color: #fdfdfd;
+  box-shadow:2px 2px 30px #c2c2c2;
+}
+.tips_icon {
+  font-size: 30px;
+  line-height: 100px;
+}
+.tips_right {
+  margin-top: 27px;
+}
+.tips {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.form {
+  padding: 90px;
+}
+.edit-btn {
+  float: right;
+  margin-top: 50px;
+}
+.avatar {
+  margin-left: 140px;
+  margin-top: 120px;
+  font-size: 30px;
+  border-radius: 50%;
+}

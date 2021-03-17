@@ -1,0 +1,32 @@
+.search-content {
+  min-height: 150px;
+  background-color: #ffffff;
+  padding: 20px 0;
+  border-bottom: 1px solid #efefef;
+}
+.grid-content {
+  min-height: 30px;
+}
+.screen-content {
+  height: 37px;
+  font-size: 14px;
+  line-height: 30px;
+}
+.screen-btn {
+  padding-left: 20px;
+  font-size: 12px;
+  color: #000;
+}
+.more-city {
+  margin-left: 30px;
+}
+.sort-content {
+  height: 40px;
+  line-height: 40px;
+}
+.post-li {
+  margin-top: 30px;
+}
+.post-pagination {
+  margin-top: 30px;
+}

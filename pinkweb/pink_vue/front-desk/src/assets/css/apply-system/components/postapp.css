@@ -1,0 +1,40 @@
+.post-item {
+  margin-top: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #dedede;
+}
+.header-content {
+  min-height: 85px;
+  padding-top: 10px;
+}
+.job-name {
+  color: #E6A23C;
+  font-weight: bold;
+}
+.header-content li {
+  margin-top: 8px;
+}
+.salary {
+  color: #409EFF;
+  padding: 0 10px 0 0;
+  border-right: 3px solid #cdcdcd;
+}
+.company-name {
+  color: #E6A23C;
+}
+.job-info {
+  font-size: 13px;
+}
+.company-info {
+  font-size: 13px;
+}
+.company-info span {
+  padding-right: 10px;
+}
+.company-logo-img {
+  height: 60px;
+  float: right;
+  margin-right: 30px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+}

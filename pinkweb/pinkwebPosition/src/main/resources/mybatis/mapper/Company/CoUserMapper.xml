@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace=绑定一个指定的Dao/Mapper接口-->
+<mapper namespace="com.work.pinkweb.Company.Mapper.CoUserMapper">
+    <resultMap id="UserEntityMap" type="com.work.pinkweb.Entity.User">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result property="name" column="name"/>
+        <result property="phone" column="phone"/>
+        <result property="password" column="password"/>
+        <result property="sex" column="sex"/>
+        <result property="created_time" column="created_time"/>
+    </resultMap>
+
+   <insert id="insertOneUser">
+       insert into user (name,phone,password,sex,created_time) values (#{name},#{phone},#{password},#{sex},#{created_time})
+   </insert>
+    <select id="getByPhone" resultMap="UserEntityMap">
+        select id from user where phone=#{phone}
+    </select>
+</mapper>

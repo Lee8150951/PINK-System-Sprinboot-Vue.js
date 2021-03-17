@@ -1,0 +1,29 @@
+.message-card {
+  border: 0;
+  font-weight: lighter;
+  font-size: 15px;
+}
+.project-card {
+  margin-top: 10px;
+}
+.project li {
+  margin-top: 7px;
+}
+.project-name {
+  font-weight: bold;
+  font-size: 14px;
+  padding-right: 12px;
+  border-right: 3px solid #dbdbdb;
+}
+.project-job{
+  font-weight: bold;
+  margin-left: 10px;
+}
+.project-time {
+  font-size: 13px;
+  margin-left: 25px;
+}
+.project-address {
+  font-weight: bold;
+  font-size: 14px;
+}

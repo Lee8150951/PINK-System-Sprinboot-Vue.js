@@ -1,0 +1,10 @@
+.chat-content {
+  background-color: #e3e7ed;
+  line-height: 24px;
+  font-size: 13px;
+  padding: 3px 12px;
+  border-radius: 8px 0 8px 8px;
+}
+.dialogue-ul li {
+  margin-bottom: 20px;
+}

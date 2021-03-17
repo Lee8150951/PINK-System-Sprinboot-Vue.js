@@ -1,0 +1,20 @@
+.login-back {
+  height: 349px;
+  box-shadow:10px 20px 20px #ededf2;
+}
+.form-base {
+  margin-top: 10px;
+  padding: 0px 60px;
+}
+.el-input {
+  margin-top: 40px;
+}
+.form-button {
+  margin-top: 40px;
+  width: 100%;
+}
+.tips {
+  margin-top: 20px;
+  margin-left: 200px;
+  font-size: 13px;
+}

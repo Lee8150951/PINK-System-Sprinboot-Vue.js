@@ -1,0 +1,25 @@
+.community-li{
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #efefef;
+  transition: 0.3s;
+}
+.avatar {
+  border-radius: 50%;
+  width: 45px;
+}
+.c-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #6b6b6b;
+}
+.c-info {
+  color: #c4c4c4;
+  font-size: 13px;
+  margin-left: 10px;
+}
+.community {
+  color: #828282;
+  margin-top: 6px;
+  font-size: 12px;
+}

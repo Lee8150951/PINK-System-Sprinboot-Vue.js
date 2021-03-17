@@ -1,0 +1,104 @@
+.grid-content {
+  min-height: 36px;
+}
+.home-body {
+  height: 100%;
+}
+.index-background {
+  height: 800px;
+  margin-top: -60px;
+  opacity: 1.5;
+  background-size: cover;
+  background: url("../../../assets/img/background/index-bg.jpg") no-repeat fixed center;
+  position: relative;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.main-title_1 {
+  position: absolute;
+  top: 350px;
+  left: 500px;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #ffffff;
+}
+.main-title_2 {
+  position: absolute;
+  top: 450px;
+  left: 600px;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #ffffff;
+}
+.search {
+  margin-top: 40px;
+}
+.preview {
+  margin-top: 50px;
+}
+.right-preview {
+  margin-left: 12px;
+}
+.overview {
+  background-color: #ffffff;
+  box-shadow: -5px 5px 15px #dbdbdb;
+}
+.carousel-img {
+  height: 302px;
+  box-shadow: -5px 5px 15px #dbdbdb;
+}
+.el-carousel {
+  z-index: 0;
+}
+.left-preview-content {
+  height: 302px;
+}
+.left-preview-content ul li {
+  padding: 3px 0 0 25px;
+}
+.left-item {
+  font-weight: bold;
+}
+.right-item {
+  padding-left: 10px;
+}
+.el-button--text {
+  font-size: 13px;
+  color: #61687c;
+}
+.preview-btn {
+  float: right;
+  margin-right: 15%;
+}
+.title {
+  margin-top: 80px;
+}
+.title-content {
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  color: #61687c;
+}
+.companies {
+  margin-top: 30px;
+}
+.company-content {
+  height: 240px;
+  margin-left: 20px;
+  background-color: #fff;
+  box-shadow: -5px 5px 15px #dbdbdb;
+}
+.more-btn {
+  margin-top: 25px;
+  text-align: center;
+}
+.wide-button {
+  padding: 12px 100px;
+  border-radius: 0;
+  box-shadow: -5px 5px 15px #c7c7c7;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace=绑定一个指定的Dao/Mapper接口-->
+<mapper namespace="com.work.pinkweb.HR.Mapper.RecruitmentMapper">
+    <resultMap id="RecruitmentEntityMap" type="com.work.pinkweb.Entity.Recruitment">
+        <id property="r_id" column="r_id" jdbcType="BIGINT" />
+        <result property="ehrid" column="ehrid"/>
+        <result property="r_name" column="r_name"/>
+        <result property="r_salary" column="r_salary"/>
+        <result property="r_experience" column="r_experience"/>
+        <result property="r_education" column="r_education"/>
+        <result property="r_address" column="r_address"/>
+        <result property="r_timetag" column="r_timetag"/>
+        <result property="r_introduction" column="r_introduction"/>
+        <result property="created_time" column="created_time"/>
+        <result property="r_tag" column="r_tag"/>
+        <result property="total" column="count(*)"/>
+        <collection property="applyList" ofType="com.work.pinkweb.Entity.Apply">
+            <id column="apply_id" property="apply_id" jdbcType="BIGINT"/>
+
+        </collection>
+    </resultMap>
+
+    <select id="getRecruitmentByEhrid" resultMap="RecruitmentEntityMap">
+        select *  from recruitment_info  where ehrid=#{ehrid}
+
+    </select>
+    <delete id="deleteOneRecruitment">
+        delete from recruitment_info where r_id=#{r_id}
+    </delete>
+    <insert id="insertOneRecruitment" parameterType="com.work.pinkweb.Entity.Recruitment">
+        insert into recruitment_info (r_name,r_tag,r_address,r_experience,r_education,ehrid,r_salary,r_introduction,created_time)values(#{r_name},#{r_tag},#{r_address},#{r_experience},#{r_education},#{ehrid},#{r_salary},#{r_introduction},#{created_time})
+    </insert>
+    <select id="getRecruitmentAppByRid" resultMap="RecruitmentEntityMap">
+        select ri.*,a.* from recruitment_info ri
+        left join apply a on a.p_id=ri.r_id
+        where ri.r_id=#{r_id}
+    </select>
+    <update id="updateRecruitment" parameterType="com.work.pinkweb.Entity.Recruitment">
+        update recruitment_info SET r_salary=#{r_salary},r_name=#{r_name},r_tag=#{r_tag},r_education=#{r_education},r_introduction=#{r_introduction},r_address=#{r_address},r_experience=#{r_experience}
+        where r_id=#{r_id}
+    </update>
+
+
+
+</mapper>

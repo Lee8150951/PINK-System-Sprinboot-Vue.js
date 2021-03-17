@@ -1,0 +1,38 @@
+.company-col {
+  padding: 10px 25px 0;
+  transition: 0.5s;
+}
+.company-content {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+.cc-logo {
+  border-radius: 50%;
+  border: 1px solid #e2e2e2;
+  width: 40px;
+}
+.cc-panel {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.cc-name {
+  color: #3bbbff;
+  font-weight: bold;
+}
+.cc-boss {
+  color: #97999a;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.cc-type {
+  float: right;
+  margin-right: 20px;
+  color: #565858;
+  font-weight: bold;
+}
+.cc-time {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #d2d2d4;
+  font-weight: lighter;
+}

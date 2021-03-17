@@ -1,0 +1,43 @@
+.resume-body {
+  padding: 20px 10%;
+}
+.resume-list {
+  border-radius: 10px;
+  box-shadow: -5px 5px 15px #dbdbdb;
+  background-color: #ffffff;
+  padding-bottom: 20px;
+}
+.top-title {
+  padding: 20px 35px;
+}
+.top-left {
+  font-size: 18px;
+}
+.top-right {
+  text-align: right;
+}
+.top-btn {
+  padding: 0;
+  color: #E6A23C;
+  margin-right: 20px;
+}
+.style-list {
+  border-radius: 10px;
+  box-shadow: -5px 5px 15px #dbdbdb;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+.bottom-title {
+  padding: 20px 35px;
+  font-size: 18px;
+}
+.bottom-body {
+  padding: 30px 12%;
+}
+.resume-img {
+  width: 230px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  transition: 0.3s;
+  cursor: pointer;
+}

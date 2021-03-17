@@ -1,0 +1,36 @@
+.resume-item {
+  cursor: pointer;
+}
+.resume-body {
+  padding: 10px 30px;
+}
+.resume-item :hover {
+  background-color: #f4f5f7;
+  transition: 0.3s;
+}
+.resume-li-img {
+  width: 125px;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+}
+.resume-name {
+  font-weight: lighter;
+  margin-top: 20px;
+}
+.resume-operate {
+  position: absolute;
+  bottom: 20px
+}
+.resume-operate span {
+  margin-right: 15px;
+}
+.resume-btn {
+  color: #61687c;
+  font-size: 13px;
+}
+.time-content {
+  text-align: right;
+  margin-top: 20px;
+  font-weight: lighter;
+  font-size: 13px;
+}

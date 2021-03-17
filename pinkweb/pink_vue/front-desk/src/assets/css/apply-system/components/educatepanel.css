@@ -1,0 +1,29 @@
+.message-card {
+  border: 0;
+  font-weight: lighter;
+  font-size: 15px;
+}
+.edu-card {
+  margin-top: 10px;
+}
+.edu li {
+  margin-top: 7px;
+}
+.edu-name {
+  font-weight: bold;
+}
+.edu-time {
+  font-size: 13px;
+  margin-left: 25px;
+}
+.edu-depart {
+  font-weight: bold;
+  font-size: 14px;
+  padding-right: 12px;
+  border-right: 3px solid #dbdbdb;
+}
+.edu-work {
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 10px;
+}

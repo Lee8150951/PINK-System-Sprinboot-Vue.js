@@ -1,0 +1,48 @@
+/*清除元素默认的内外边距  */
+* {
+  margin: 0;
+  padding: 0;
+  /* CSS3盒子模型 */
+  box-sizing: border-box;
+}
+html, body, #app, .el-container {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+/*让所有斜体 不倾斜*/
+em,i {
+  font-style: normal;
+}
+/*去掉列表前面的小点*/
+li {
+  list-style: none;
+}
+/*图片没有边框   去掉图片底侧的空白缝隙*/
+img {
+  border: 0;  /*ie6*/
+  vertical-align: middle;
+}
+/*颜色*/
+.bg-green {
+  background-color: #67C23A;
+}
+.bg-red {
+  background-color: #F56C6C;
+}
+.bg-orange {
+  background-color: #E6A23C;
+}
+.bg-blue {
+  background-color: #409EFF;
+}
+.bg-grey {
+  background-color: #909399;
+}
+.height-all {
+  height: 100%;
+}
+
+.el-textarea__inner{
+  resize: none;
+}

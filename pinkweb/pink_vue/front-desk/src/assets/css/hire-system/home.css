@@ -1,0 +1,47 @@
+.home-overview {
+  height: 200px;
+  width: 100%;
+  background-color: #fff;
+  padding: 40px 40px;
+}
+.info-body {
+  padding: 25px 40px;
+}
+.info-title {
+  font-size: 14px;
+  font-weight: lighter;
+}
+.community-list {
+  background-color: #fff;
+  margin-right: 60px;
+  margin-top: 20px;
+  border: 1px solid #efefef;
+}
+.more-item {
+  color: #c3c2c5;
+  cursor: pointer;
+}
+.more-span {
+  float: right;
+  margin-right: 80px;
+  cursor: pointer;
+}
+.memo-col {
+  background-color: #fff;
+  margin-right: 60px;
+  margin-top: 20px;
+  border: 1px solid #efefef;
+  padding: 30px 30px;
+  line-height: 25px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+.memo-big {
+  font-size: 40px;
+}
+.dialogue {
+  text-align: right;
+}
+.memo-btn {
+  margin-top: 20px;
+}

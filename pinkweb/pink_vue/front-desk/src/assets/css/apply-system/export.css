@@ -1,0 +1,52 @@
+.export-body {
+  padding: 20px 10%;
+}
+.export-title {
+  background-color: #fff;
+  box-shadow: -5px 5px 15px #dbdbdb;
+  border-radius: 10px;
+  padding: 16px 2%;
+}
+.top-left-content {
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 30px;
+}
+.top-left-btn {
+  padding: 0;
+  font-size: 16px;
+  color: #414a60;
+}
+.top-right-content {
+  text-align: right;
+  margin-right: 20px;
+}
+.rename-btn {
+  float: right;
+}
+.pdf-col {
+  margin-top: 20px;
+}
+.pdf-content {
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: -5px 5px 15px #dbdbdb;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.btn-content {
+  padding: 20px 30px;
+  background-color: #fff;
+  box-shadow: -5px 5px 15px #dbdbdb;
+  border-radius: 10px;
+  text-align: center;
+}
+.right-btn_1 {
+  padding: 10px 45%;
+  border-radius: 0;
+}
+.right-btn_2 {
+  padding: 10px 45%;
+  border-radius: 0;
+  margin-top: 15px;
+}

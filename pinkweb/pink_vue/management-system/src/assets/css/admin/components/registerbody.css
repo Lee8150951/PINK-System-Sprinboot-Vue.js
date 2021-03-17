@@ -1,0 +1,9 @@
+.grid-content {
+  min-height: 1px;
+}
+.content {
+  border: 1px solid #fcfbfe;
+  box-shadow:10px 20px 20px #ededf2;
+  background: #fff;
+  height: 390px;
+}

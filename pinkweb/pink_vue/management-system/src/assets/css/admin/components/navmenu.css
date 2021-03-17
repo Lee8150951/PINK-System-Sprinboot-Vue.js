@@ -1,0 +1,26 @@
+.el-header {
+  padding: 0;
+}
+.el-menu{
+  background-color: #ffffff;
+  box-shadow:2px 2px 30px #d8d8d8;
+}
+.logo {
+  height: 50px;
+  width: 120px;
+}
+.user {
+  float: right;
+}
+.contraction {
+  width: 30px;
+  height: 30px;
+}
+.occupied {
+  width: 60%;
+  cursor:default;
+}
+.el-badge {
+  height: 30px;
+  line-height: 30px;
+}

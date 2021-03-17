@@ -1,0 +1,90 @@
+.main-body {
+  padding: 0 40px;
+}
+.tl-panel {
+  height: 450px;
+  background-color: #1e3058;
+  border: 2px solid #dcdcdc;
+  padding: 25px 20px 20px;
+}
+.greet-time {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+}
+.greet-target {
+  color: #ffffff;
+  font-size: 25px;
+}
+.tr-panel {
+  margin-left: 10px;
+}
+.hr-num {
+  height: 180px;
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+  padding: 20px;
+}
+.post-num {
+  height: 180px;
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+  margin-left: 12px;
+  padding: 20px;
+}
+.company-info {
+  height: 258px;
+  width: 98%;
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+  margin-top: 10px;
+  padding: 20px;
+}
+.tips-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+.tips-num {
+  font-size: 60px;
+  margin-top: 15px;
+  color: #848c8f;
+}
+.tips-other {
+  font-weight: lighter;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.more-btn_1 {
+  display: inline;
+  margin-left: 70px;
+}
+.more-btn_2 {
+  display: inline;
+  margin-left: 50px;
+}
+.info-tips {
+  margin-top: 10px;
+}
+.left-tips {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-right: 1px solid #dedede;
+}
+.right-tips {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-left: 25px;
+}
+.tip-li {
+  color: #7a8686;
+  margin-top: 18px;
+  font-size: 13px;
+}
+.more-col {
+  margin-top: 20px;
+  text-align: right;
+  margin-right: 10px;
+}
+.more-btn {
+  border-radius: 0;
+}

@@ -1,0 +1,44 @@
+.box-content {
+  height: 128px;
+  margin-right: 15px;
+  margin-top: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 15px #dedede;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.box-content:hover {
+  box-shadow: -5px 5px 15px #adadad;
+  transition: 0.5s;
+}
+.box-head {
+  height: 80px;
+  border-bottom: 1px dashed #eaeaea;
+}
+.box-footer {
+  height: 48px;
+  line-height: 35px;
+}
+.company-title {
+  font-size: 15px;
+  text-align: right;
+  margin-top: 15px;
+}
+.company-info {
+  margin-top: 8px;
+  font-size: 12px;
+  text-align: right;
+  color: #979797;
+}
+.position-content {
+  font-size: 10px;
+}
+.position-info {
+  color: #E6A23C;
+}
+.c-logo {
+  height: 55px;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  margin-top: 5px;
+}

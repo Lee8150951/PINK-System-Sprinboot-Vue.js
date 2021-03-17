@@ -1,0 +1,115 @@
+.main-row {
+  margin: 0 40px;
+}
+.left-content {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+.avatar-col {
+  text-align: center;
+  background: url("../../img/background/attract-bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  padding-top: 100px;
+  padding-bottom: 55px;
+}
+.relative {
+  position: relative;
+}
+.avatar {
+  border-radius: 50%;
+  width: 120px;
+  border: 6px solid white;
+}
+.user-name {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 30px;
+  color: #ffffff;
+}
+.school-name {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #bdbdbd;
+  margin-top: 10px;
+}
+.box-title {
+  font-size: 10px;
+}
+.base-info-li {
+  padding: 10px 40px 40px;
+  height: 260px;
+}
+.info-li {
+  margin-top: 20px;
+}
+.info-title {
+  font-size: 14px;
+  font-weight: bolder;
+  color: #656565;
+}
+.info-body {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #656565;
+  margin-left: 20px;
+}
+.right-content {
+  margin-left: 20px;
+}
+.right-top {
+  height: 260px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 25px 30px;
+}
+.rt-title {
+  font-size: 18px;
+  font-weight: lighter;
+}
+.rt-body {
+  margin-top: 20px;
+}
+.rb-special {
+  padding: 25px 25px 0;
+}
+.right-bottom {
+  height: 280px;
+  background-color: #fff;
+  margin-top: 20px;
+  border: 1px solid #e5e5e5;
+}
+.ei-left {
+  border-right: 1px solid #d2d2d2;
+}
+.ei-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4c4c64;
+}
+.ei-li {
+  padding-top: 15px;
+  font-size: 14px;
+  font-weight: lighter;
+}
+.ei-right {
+  padding-left: 30px;
+}
+.ie-left {
+  border-right: 1px solid #d2d2d2;
+  padding-left: 25px;
+  margin-top: 20px;
+}
+.ie-li {
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: lighter;
+}
+.ie-right {
+  padding-left: 25px;
+  margin-top: 20px;
+}
+.annex-btn {
+  width: 100%;
+  border-radius: 0;
+  margin-top: 17px;
+}

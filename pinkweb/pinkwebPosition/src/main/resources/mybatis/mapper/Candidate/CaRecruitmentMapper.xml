@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace=绑定一个指定的Dao/Mapper接口-->
+<mapper namespace="com.work.pinkweb.Candidate.Mapper.CaRecruitmentMapper">
+    <resultMap id="RecruitmentEntityMap"
+               type="com.work.pinkweb.Entity.Recruitment">
+        <id column="r_id" property="r_id" jdbcType="BIGINT"/>
+        <result property="ehrid" column="ehrid"/>
+        <result property="r_name" column="r_name"/>
+        <result property="r_salary" column="r_salary"/>
+        <result property="r_experience" column="r_experience"/>
+        <result property="r_education" column="r_education"/>
+        <result property="r_address" column="r_address"/>
+        <result property="r_timetag" column="r_timetag"/>
+        <result property="r_tag" column="r_tag"/>
+        <association property="companyHr" javaType="com.work.pinkweb.Entity.CompanyHr">
+            <id column="enterprise_id" property="enterprise_id" jdbcType="BIGINT"/>
+            <association property="company" javaType="com.work.pinkweb.Entity.Company">
+                <id column="e_id" property="e_id" jdbcType="BIGINT"/>
+                <result property="e_name" column="e_name"/>
+                <result property="e_introduction" column="e_introduction"/>
+                <result property="e_legalrepresentative" column="e_legalrepresentative"/>
+                <result property="e_registeredcapital" column="e_registeredcapital"/>
+                <result property="e_establishtime" column="e_establishtime"/>
+                <result property="e_type" column="e_type"/>
+                <result property="e_size" column="e_size"/>
+                <result property="e_operationstatus" column="e_operationstatus"/>
+                <result property="e_registeredaddress" column="e_registeredaddress"/>
+                <result property="e_unifiedcreditcode" column="e_unifiedcreditcode"/>
+                <result property="e_businessscope" column="e_businessscope"/>
+                <result property="e_licenseimg" column="e_licenseimg"/>
+                <result property="e_executive" column="e_executive"/>
+                <result property="e_position" column="e_position"/>
+                <result property="e_executive_intro" column="e_executive_intro"/>
+                <result property="e_logo" column="e_logo"/>
+                <result property="e_operationstatus" column="e_operationstatus"/>
+                <result property="e_size" column="e_size"/>
+                <result property="e_logo" column="e_logo"/>
+            </association>
+            <association property="user" javaType="com.work.pinkweb.Entity.User">
+                <id column="id" property="id" jdbcType="BIGINT"/>
+                <result property="avatar" column="avatar"/>
+                <result property="name" column="name"/>
+            </association>
+        </association>
+    </resultMap>
+
+    <select id="getHotRecruitment" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+        LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+        LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+        LEFT JOIN user u on ri.ehrid=u.id
+        ORDER BY RAND () LIMIT 10
+        <!--        where r_id =#{rId}-->
+    </select>
+
+    <select id="getAllRecruitment" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+                 LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+                 LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+                 LEFT JOIN user u on ri.ehrid=u.id
+        ORDER BY r_id
+<!--        where r_id =#{rId}-->
+    </select>
+    <select id="getRecruitmentDetailsById" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+        LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+        LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+        LEFT JOIN user u on ri.ehrid=u.id
+        where r_id =#{r_id}
+        ORDER BY r_id
+
+    </select>
+    <select id="getByName" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+                 LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+                 LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+                 LEFT JOIN user u on ri.ehrid=u.id
+        where r_name like CONCAT(CONCAT('%',#{r_name}),'%')
+        ORDER BY r_id
+    </select>
+    <select id="getByAddress" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+                 LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+                 LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+                 LEFT JOIN user u on ri.ehrid=u.id
+        where r_address like CONCAT(CONCAT('%',#{r_address}),'%')
+        ORDER BY r_id
+    </select>
+    <select id="getByDegree" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+                 LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+                 LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+                 LEFT JOIN user u on ri.ehrid=u.id
+        where r_education like CONCAT(CONCAT('%',#{r_education}),'%')
+        ORDER BY r_id
+    </select>
+    <select id="getBySalary" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+                 LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+                 LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+                 LEFT JOIN user u on ri.ehrid=u.id
+        where r_salary like CONCAT(CONCAT('%',#{r_salary}),'%')
+        ORDER BY r_id
+    </select>
+    <select id="getByTime" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+                 LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+                 LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+                 LEFT JOIN user u on ri.ehrid=u.id
+        where ri.created_time BETWEEN from_unixtime(UNIX_TIMESTAMP(NOW())-86400*#{r_timetag}) AND NOW()
+        ORDER BY r_id
+    </select>
+    <select id="getByExperience" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+                 LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+                 LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+                 LEFT JOIN user u on ri.ehrid=u.id
+        where r_experience like CONCAT(CONCAT('%',#{r_experience}),'%')
+        ORDER BY r_id
+    </select>
+
+
+    <select id="getAllCity" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+                 LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+                 LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+                 LEFT JOIN user u on ri.ehrid=u.id
+        ORDER BY r_id
+    </select>
+
+    <select id="getByCity" resultMap="RecruitmentEntityMap">
+        SELECT  ri.*,ei.*,u.name
+        FROM recruitment_info ri
+                 LEFT JOIN enterprise_hr eh on ri.ehrid=eh.ehr_id
+                 LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+                 LEFT JOIN user u on ri.ehrid=u.id
+        where r_address like CONCAT(CONCAT('%',#{r_address}),'%')
+        ORDER BY r_id
+    </select>
+</mapper>

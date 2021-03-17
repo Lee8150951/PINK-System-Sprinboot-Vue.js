@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.work.pinkweb.Candidate.Mapper.EditMapper" >
+    <resultMap id="CandidateMap" type="com.work.pinkweb.Entity.Candidate">
+        <result property="c_id" column="c_id"/>
+        <result property="c_type" column="c_type"/>
+        <result property="c_resumeid" column="c_resumeid"/>
+        <result property="c_exindustry" column="c_exindustry"/>
+        <result property="c_exposition" column="c_exposition"/>
+        <result property="c_excity" column="c_excity"/>
+        <result property="c_exsalary" column="c_exsalary"/>
+        <result property="c_fdegree" column="c_fdegree"/>
+        <result property="c_fschool" column="c_fschool"/>
+        <result property="c_fmajor" column="c_fmajor"/>
+        <result property="c_ftime" column="c_ftime"/>
+        <result property="c_sdegree" column="c_sdegree"/>
+        <result property="c_sschool" column="c_sschool"/>
+        <result property="c_smajor" column="c_smajor"/>
+        <result property="c_stime" column="c_stime"/>
+        <result property="c_finternship_enterprise" column="c_finternship_enterprise"/>
+        <result property="c_finternship_job" column="c_finternship_job"/>
+        <result property="c_finternship_stime" column="c_finternship_stime"/>
+        <result property="c_finternship_etime" column="c_finternship_etime"/>
+        <result property="c_sinternship_enterprise" column="c_sinternship_enterprise"/>
+        <result property="c_sinternship_job" column="c_sinternship_job"/>
+        <result property="c_sinternship_stime" column="c_sinternship_stime"/>
+        <result property="c_sinternship_etime" column="c_sinternship_etime"/>
+        <result property="c_intro" column="c_intro"/>
+        <result property="c_vx" column="c_vx"/>
+        <association property="user" javaType="com.work.pinkweb.Entity.User">
+            <result property="id" column="id"/>
+            <result property="name" column="name"/>
+            <result property="birthday" column="birthday"/>
+            <result property="type" column="type"/>
+            <result property="sex" column="sex"/>
+            <result property="created_time" column="created_time"/>
+            <result property="phone" column="phone"/>
+            <result property="email" column="email"/>
+            <result property="avatar" column="avatar"/>
+        </association>
+    </resultMap>
+
+    <select id="getCandidateInfo" resultMap="CandidateMap"  >
+        SELECT
+            c.*,u.name,u.type,u.birthday,u.sex,u.created_time,u.phone,u.email,u.id,u.avatar
+        FROM candidate c
+                 LEFT JOIN user u on c.c_id=u.id
+        where id = #{id}
+    </select>
+</mapper>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.work.pinkweb.Candidate.Mapper.CaCompanyMapper" >
+    <resultMap id="CompanyMap" type="com.work.pinkweb.Entity.Company">
+        <id column="e_id" property="e_id" jdbcType="BIGINT"/>
+        <result property="e_name" column="e_name"/>
+        <result property="e_type" column="e_type"/>
+        <result property="e_address" column="e_address"/>
+        <result property="e_operationstatus" column="e_operationstatus"/>
+        <result property="e_introduction" column="e_introduction"/>
+        <result property="e_businessscope" column="e_businessscope"/>
+        <result property="e_size" column="e_size"/>
+        <result property="e_registeredcapital" column="e_registeredcapital"/>
+        <result property="e_legalrepresentative" column="e_legalrepresentative"/>
+        <result property="e_registeredaddress" column="e_registeredaddress"/>
+        <result property="e_executive" column="e_executive"/>
+        <result property="e_position" column="e_position"/>
+        <result property="e_establishtime" column="e_establishtime"/>
+        <result property="e_operationstatus" column="e_operationstatus"/>
+        <result property="e_registeredaddress" column="e_registeredaddress"/>
+        <result property="e_unifiedcreditcode" column="e_unifiedcreditcode"/>
+        <result property="e_introduction" column="e_introduction"/>
+        <result property="e_executive_intro" column="e_executive_intro"/>
+        <result property="e_logo" column="e_logo"/>
+        <collection property="companyHrList" ofType="com.work.pinkweb.Entity.CompanyHr">
+            <id column="enterprise_id" property="enterprise_id"/>
+            <result property="ehr_currentaccount" column="ehr_currentaccount"/>
+            <result property="hr_account" column="hr_account"/>
+        </collection>
+    </resultMap>
+
+    <select id="getCompanyDetailbById" resultMap="CompanyMap"  >
+    SELECT
+    ei.*,eh.enterprise_id,sum(eh.ehr_currentaccount) as ehr_currentaccount,count(eh.ehr_id) as hr_account
+    FROM enterprise_info ei
+    LEFT JOIN enterprise_hr eh on ei.e_id=eh.enterprise_id
+    where e_id = #{e_id}
+    </select>
+
+
+    <resultMap id="CompanyHrMap" type="com.work.pinkweb.Entity.Company">
+        <id column="e_id" property="e_id" jdbcType="BIGINT"/>
+        <result property="e_name" column="e_name"/>
+        <collection property="companyHrList" ofType="com.work.pinkweb.Entity.CompanyHr">
+            <id column="ehr_id" property="ehr_id" jdbcType="BIGINT"/>
+            <result property="ehr_position" column="ehr_position"/>
+            <association property="user" javaType="com.work.pinkweb.Entity.User">
+                <id column="id" property="id" jdbcType="BIGINT"/>
+                <result property="name" column="name"/>
+            </association>
+            <collection property="recruitmentList" ofType="com.work.pinkweb.Entity.Recruitment">
+                <id column="ehrid" property="ehrid" jdbcType="BIGINT"/>
+                <result property="r_id" column="r_id"/>
+                <result property="r_address" column="r_address"/>
+                <result property="r_salary" column="r_salary"/>
+                <result property="r_education" column="r_education"/>
+                <result property="r_name" column="r_name"/>
+                <result property="r_tag" column="r_tag"/>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="getCompanyHr" resultMap="CompanyHrMap"  >
+        SELECT
+            ei.e_id,ei.e_name,eh.enterprise_id,eh.ehr_position,u.name,ri.ehrid,ri.r_address,ri.r_salary,ri.r_education,ri.r_name,ri.r_tag,ri.r_id
+        FROM enterprise_info ei
+                 LEFT JOIN enterprise_hr eh on ei.e_id=eh.enterprise_id
+                 LEFT JOIN recruitment_info ri on ri.ehrid=eh.ehr_id
+                 LEFT JOIN user u on u.id=eh.ehr_id
+        where e_id = #{e_id}
+        LIMIT 5
+    </select>
+
+
+    <resultMap id="HrMap" type="com.work.pinkweb.Entity.CompanyHr">
+        <id column="ehr_id" property="ehr_id" jdbcType="BIGINT"/>
+        <result property="ehr_position" column="ehr_position"/>
+        <result property="enterprise_id" column="enterprise_id"/>
+        <result property="ehr_currentaccount" column="ehr_currentaccount"/>
+        <association property="user" javaType="com.work.pinkweb.Entity.User">
+            <result property="name" column="name"/>
+        </association>
+        <association property="company" javaType="com.work.pinkweb.Entity.Company">
+            <result property="e_name" column="e_name"/>
+        </association>
+    </resultMap>
+
+    <select id="getHrRecruitment" resultMap="HrMap"  >
+        SELECT
+            eh.enterprise_id,eh.ehr_position,ehr_currentaccount,u.name,ei.e_name
+        FROM enterprise_hr eh
+                 LEFT JOIN user u on u.id=eh.ehr_id
+                 LEFT JOIN enterprise_info ei on ei.e_id=eh.enterprise_id
+        where enterprise_id = #{e_id}
+        ORDER BY ehr_currentaccount DESC
+        LIMIT 3
+    </select>
+
+
+    <select id="getHotCompany" resultMap="CompanyMap"  >
+        SELECT
+            ei.e_id,ei.e_name,ei.e_type,ei.e_operationstatus,ei.e_logo,ei.e_size,eh.enterprise_id,sum(eh.ehr_currentaccount) as ehr_currentaccount
+        FROM enterprise_info ei
+                 LEFT JOIN  enterprise_hr eh on ei.e_id=eh.enterprise_id
+        GROUP BY ei.e_id
+        ORDER BY RAND () LIMIT 6
+    </select>
+
+
+    <select id="getAllCompany" resultMap="CompanyMap"  >
+        SELECT
+            ei.*,eh.enterprise_id,sum(eh.ehr_currentaccount) as ehr_currentaccount
+        FROM enterprise_info ei
+                 LEFT JOIN  enterprise_hr eh on ei.e_id=eh.enterprise_id
+        GROUP BY ei.e_id
+        ORDER BY ehr_currentaccount
+    </select>
+
+
+    <select id="getCompanyByCity" resultMap="CompanyMap"  >
+        SELECT
+            ei.e_id,ei.e_name,ei.e_type,ei.e_address,ei.e_operationstatus,ei.e_logo,ei.e_size,eh.enterprise_id,sum(eh.ehr_currentaccount) as ehr_currentaccount
+        FROM enterprise_info ei
+                 LEFT JOIN  enterprise_hr eh on ei.e_id=eh.enterprise_id
+        where e_address = #{e_address}
+        GROUP BY ei.e_id
+        ORDER BY ehr_currentaccount
+    </select>
+
+
+    <select id="getCompanyByType" resultMap="CompanyMap"  >
+        SELECT
+            ei.e_id,ei.e_name,ei.e_type,ei.e_address,ei.e_operationstatus,ei.e_logo,ei.e_size,eh.enterprise_id,sum(eh.ehr_currentaccount) as ehr_currentaccount
+        FROM enterprise_info ei
+                 LEFT JOIN  enterprise_hr eh on ei.e_id=eh.enterprise_id
+        where e_type = #{e_type}
+        GROUP BY ei.e_id
+        ORDER BY ehr_currentaccount
+    </select>
+
+
+    <select id="getCompanyBySize" resultMap="CompanyMap"  >
+        SELECT
+            ei.e_id,ei.e_name,ei.e_type,ei.e_address,ei.e_operationstatus,ei.e_logo,ei.e_size,eh.enterprise_id,sum(eh.ehr_currentaccount) as ehr_currentaccount
+        FROM enterprise_info ei
+                 LEFT JOIN  enterprise_hr eh on ei.e_id=eh.enterprise_id
+        where e_size = #{e_size}
+        GROUP BY ei.e_id
+        ORDER BY ehr_currentaccount
+    </select>
+
+
+    <select id="searchCompany" resultMap="CompanyMap"  >
+        SELECT
+            ei.e_id,ei.e_name,ei.e_type,ei.e_operationstatus,ei.e_address,ei.e_logo,ei.e_size,eh.enterprise_id,sum(eh.ehr_currentaccount) as ehr_currentaccount
+        FROM enterprise_info ei
+                 LEFT JOIN  enterprise_hr eh on ei.e_id=eh.enterprise_id
+        where e_name like CONCAT(CONCAT('%',#{key}),'%')
+        GROUP BY ei.e_id
+        ORDER BY ehr_currentaccount
+    </select>
+
+</mapper>

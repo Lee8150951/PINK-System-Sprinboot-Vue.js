@@ -1,0 +1,106 @@
+.main-row {
+  margin: 0 40px;
+}
+.left-content {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+.avatar-col {
+  text-align: center;
+  background: url("../../../assets/img/back/hr-bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  padding-top: 100px;
+  padding-bottom: 54px;
+}
+.relative {
+  position: relative;
+}
+.avatar {
+  border-radius: 50%;
+  width: 120px;
+  border: 6px solid white;
+}
+.user-name {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 30px;
+  color: #ffffff;
+}
+.company-name {
+  font-size: 13px;
+  font-weight: lighter;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.box-content {
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  font-weight: lighter;
+  padding: 18px 0;
+}
+.box-num {
+  font-size: 25px;
+}
+.box-title {
+  font-size: 10px;
+}
+.base-info-li {
+  padding: 10px 40px 40px;
+}
+.info-li {
+  margin-top: 20px;
+}
+.info-title {
+  font-size: 14px;
+  font-weight: bolder;
+  color: #656565;
+}
+.info-body {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #656565;
+  margin-left: 20px;
+}
+.right-content {
+  margin-left: 20px;
+}
+.right-top {
+  height: 250px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 25px 30px;
+}
+.rt-title {
+  font-size: 18px;
+  font-weight: lighter;
+}
+.left-detail {
+  margin-top: 15px;
+  height: 165px;
+  border-right: 1px solid #e2e2e2;
+}
+.right-detail {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+.rb-special {
+  padding: 25px 25px 0;
+}
+.right-bottom {
+  height: 349px;
+  background-color: #fff;
+  margin-top: 20px;
+  border: 1px solid #e5e5e5;
+}
+.detail-col {
+  padding: 10px;
+}
+.detail-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+.detail-content {
+  font-weight: lighter;
+  font-size: 14px;
+}

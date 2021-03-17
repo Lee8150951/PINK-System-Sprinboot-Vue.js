@@ -1,0 +1,164 @@
+.header {
+  background: url("../../../assets/img/background/detail-bg.jpg");
+  padding: 60px 10%;
+}
+.p-basic {
+  font-size: 35px;
+}
+.p-basic .p-name {
+  color: #ffffff;
+}
+.p-basic .p-salary {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e59722;
+}
+.p-info {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #eeeeee;
+}
+.communicate-btn {
+  border-radius: 0;
+  padding: 16px 15%;
+  margin-left: 20px;
+  margin-top: 12px;
+}
+.left-content {
+  border-right: 1px solid #dedede;
+  height: 360px;
+}
+.right-content {
+  text-align: center;
+  margin-top: 36px;
+}
+.top-tip {
+  font-size: 16px;
+}
+.bottom-tip {
+  font-size: 13px;
+  margin-top: 12px;
+}
+.qr-code {
+  height: 100px;
+  margin-top: 25px;
+}
+.dialogue-ul {
+  height: 250px;
+  overflow-y: scroll;
+}
+.enter-box {
+  border-top: 1px solid #dedede;
+}
+.enter-text {
+  border: 0;
+  resize: none;
+  overflow: hidden
+}
+.enter-text>>>.el-input__inner {
+  border: 0;
+}
+.enter-text>>>.el-textarea__inner {
+  border: 0;
+  resize: none;
+}
+.communicate-sub {
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.left-main-content {
+  border-right: 1px solid #eaeaea;
+  padding-right: 30px;
+}
+.p-main {
+  padding: 30px 150px;
+  background-color: #fff;
+}
+.p-avatar {
+  border-radius: 50%;
+  height: 60px;
+}
+.el-button--text {
+  color: #e6a23c;
+}
+.hr-content {
+  margin-left: 6px;
+}
+.hr-name {
+  margin-top: 5px;
+  font-size: 20px;
+}
+.hr-info {
+  font-size: 13px;
+  color: #979797;
+  margin-top: 5px;
+}
+.collection-content {
+  text-align: center;
+  line-height: 40px;
+}
+.btn-content {
+  float: right;
+}
+.intro-content {
+  margin-top: 25px;
+}
+.p-intro h3{
+  border-left: 5px solid #E6A23C;
+  padding-left: 8px;
+  font-size: 16px;
+  color: #424a64;
+  margin-top: 20px;
+}
+.p-intro-main {
+  font-weight: lighter;
+  line-height: 40px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.p-more {
+  float: right;
+}
+.p-business h3 {
+  border-left: 5px solid #E6A23C;
+  padding-left: 8px;
+  font-size: 16px;
+  color: #424a64;
+  margin-top: 20px;
+}
+.collapse {
+  margin-top: 24px;
+}
+.right-main-content {
+  padding-left: 30px;
+}
+.r-company li {
+  margin-top: 20px;
+}
+.r-company-logo {
+  height: 65px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+}
+.r-company-name {
+  font-weight: lighter;
+  margin-left: 10px;
+  font-size: 15px;
+}
+.r-company-info {
+  font-weight: lighter;
+  font-size: 15px;
+}
+.r-company-info span i {
+  color: #afafaf;
+}
+.r-company-intro {
+  margin-left: 20px;
+}
+.environ-img {
+  height: 280px;
+}
+.environ-block {
+  margin-top: 20px;
+}

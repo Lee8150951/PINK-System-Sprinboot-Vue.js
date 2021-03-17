@@ -1,0 +1,38 @@
+.main-body {
+  margin-left: 40px;
+  margin-right: 50px;
+  background-color: #fff;
+  border: 1px solid #efefef;
+}
+.info-table {
+  padding: 20px 30px;
+}
+.table-foot {
+  text-align: right;
+  padding: 10px 20px;
+}
+.feature-cols {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.feature-btn {
+  border-radius: 0;
+  margin-right: 20px;
+}
+.tips-btn {
+  margin-top: 40px;
+  text-align: right;
+}
+.left-sub-content {
+  border-right: 1px solid #ececec;
+  padding-right: 20px;
+}
+.right-sub-content {
+  padding-right: 10px;
+}
+.select, .cascader-col, .date-picker {
+  width: 100%;
+}
+.dialog-footer {
+  margin-right: 10px;
+}

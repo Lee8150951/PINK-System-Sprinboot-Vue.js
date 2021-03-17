@@ -1,0 +1,31 @@
+.el-menu {
+  width: 270px;
+  border: 0px;
+}
+.el-menu--collapse {
+  width: 65px;
+}
+.main_menu {
+  height: 60px;
+}
+.main_menu_left {
+  background-color: #f1f1f1;
+  height: 100%;
+  line-height: 60px;
+  color: #868686;
+  font-size: 14px;
+  text-align: center;
+}
+.main_menu_right {
+  background-color: #e6e6e6;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+}
+.contraction {
+  height: 40%;
+  width: 40%;
+}
+.el-menu-item {
+  color: #999999;
+}

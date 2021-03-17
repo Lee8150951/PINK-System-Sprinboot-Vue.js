@@ -1,0 +1,79 @@
+.main-row {
+  margin: 0 40px;
+}
+.left-content {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 15px 20px;
+}
+.left-title {
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 10px;
+}
+.form {
+  margin-top: 15px;
+  padding-right: 20px;
+  font-weight: lighter;
+}
+.cascader-col {
+  width: 100%;
+}
+.submit-col {
+  text-align: right;
+}
+.right-content {
+  margin-left: 20px;
+}
+.rt-left-content {
+  height: 180px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 25px 30px;
+}
+.rt-right-content {
+  height: 180px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 25px 30px;
+  margin-left: 16px;
+}
+.rt-title {
+  font-size: 18px;
+  font-weight: lighter;
+  padding-bottom: 15px;
+}
+.js-left-content {
+  border: 1px solid #c1c1c1;
+  height: 90px;
+  margin-right: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.js-right-content {
+  border: 1px solid #c1c1c1;
+  height: 90px;
+  margin-left: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.num {
+  padding-top: 14px;
+  color: #4c4c64;
+  font-size: 28px;
+  font-weight: lighter;
+}
+.tips {
+  padding-bottom: 20px;
+  color: #c4c4c4;
+  font-size: 12px;
+}
+.rb-special {
+  padding: 25px 25px 0;
+}
+.right-bottom {
+  height: 420px;
+  background-color: #fff;
+  margin-top: 20px;
+  border: 1px solid #e5e5e5;
+}

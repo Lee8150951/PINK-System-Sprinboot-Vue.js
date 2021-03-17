@@ -1,0 +1,49 @@
+.all-bgc {
+  background-color: #ecf0f1;
+}
+.aside-bar {
+  height: 100%;
+  background-color: #34495e;
+  border-right: 1px solid #e7e7e7;
+}
+.logo-col {
+  background-color: #2dcc70;
+  padding: 18px 0 20px 25px;
+  height: 60px;
+}
+.company-logo {
+  width: 25px;
+  margin-left: 10px;
+}
+.main-title {
+  font-size: 18px;
+  font-weight: bolder;
+  color: #ffffff;
+}
+.sub-title {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #efefef;
+}
+.nav-bar {
+  width: 100%;
+  background-color: #fbfbfd;
+  border-bottom: 1px solid #e7e7e7;
+  height: 60px;
+}
+.search-col {
+  margin-top: 15px;
+  padding-left: 80%;
+  text-align: right;
+}
+.search-input /deep/ .el-input__inner {
+  border-radius: 20px;
+  height: 30px;
+}
+/deep/ .el-input__icon {
+  margin-top: -5px;
+}
+.avatar-col {
+  margin-top: 10px;
+  margin-left: 30%;
+}

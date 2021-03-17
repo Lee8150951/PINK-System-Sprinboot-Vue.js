@@ -1,0 +1,112 @@
+.profile-body {
+  padding: 20px 12%;
+}
+.left-col {
+  padding: 0 30px;
+}
+.recommend-content {
+  margin-top: 20px;
+}
+.recommend-title {
+  padding-top: 16px;
+  padding-left: 20px;
+  height: 51px;
+  border-bottom: 2px solid #e7e7e7;
+  background-color: #fff;
+}
+.title_1 {
+  padding-bottom: 12px;
+  border-bottom: 2px solid #E6A23C;
+  font-size: 16px;
+  color: #E6A23C;
+}
+.recommend-pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+.personal-info {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 20px;
+}
+.relative {
+  position: relative;
+}
+.occupy {
+  position: absolute;
+  left:0; right:0; top:0; bottom:0;
+  margin:auto;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(75, 75, 75, 0.3);
+  cursor: pointer;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  line-height: 70px;
+  transition: 0.3s;
+  opacity: 0;
+}
+.personal-img {
+  border-radius: 50%;
+  height: 70px;
+  cursor: pointer;
+}
+.personal-info li {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.personal-intro span{
+  padding: 0 10px;
+  font-size: 12px;
+}
+.span-left {
+  border-right: 3px solid #e2e2e2;
+}
+.span-right {
+  border-left: 3px solid #e2e2e2;
+}
+.personal-type {
+  margin: 10px 0;
+  padding: 8px 25%;
+  border-radius: 0;
+}
+.personal-btn {
+  position: absolute;
+  right: 20px;
+  color: #909090;
+  font-weight: lighter;
+}
+.personal-num {
+  font-size: 14px;
+}
+.personal-title {
+  font-size: 12px;
+  color: #b1b1b1;
+}
+.vip-btn {
+  padding: 3px;
+}
+.history-panel {
+  margin-top: 20px;
+  background-color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+.history-btn {
+  width: 40%;
+  text-align: center;
+  padding: 20px;
+  font-weight: lighter;
+  font-size: 12px;
+  border-radius: 0;
+}
+.history-btn li {
+  margin-top: 5px;
+}
+.big-num {
+  font-size: 16px;
+}
+.upload-div {
+  text-align: center;
+}

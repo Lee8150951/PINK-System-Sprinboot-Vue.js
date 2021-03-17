@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace=绑定一个指定的Dao/Mapper接口-->
+<mapper namespace="com.work.pinkweb.HR.Mapper.CompanyMapper">
+    <resultMap id="CompanyEntityMap" type="com.work.pinkweb.Entity.Company">
+        <id column="e_id" property="e_id" jdbcType="BIGINT"/>
+        <result property="e_name" column="e_name"/>
+        <result property="e_unifiedcreditcode" column="e_unifiedcreditcode"/>
+        <result property="e_phone" column="e_phone"/>
+        <collection  property="recruitmentList" ofType="com.work.pinkweb.Entity.Recruitment" javaType="java.util.List">
+            <id property="r_id" column="r_id" jdbcType="BIGINT" />
+            <result property="ehrid" column="ehrid"/>
+    </collection>
+        <collection  property="companyHrList" ofType="com.work.pinkweb.Entity.CompanyHr" javaType="java.util.List">
+            <id property="ehr_id" column="ehr_id" jdbcType="BIGINT" />
+            <result property="enterprise_id" column="enterprise_id"/>
+        </collection>
+    </resultMap>
+
+    <select id="getRCompanyById" resultMap="CompanyEntityMap">
+        select  eh.*,ri.*,ei.*
+        from enterprise_info  ei
+        left JOIN   enterprise_hr eh  on eh.enterprise_id=ei.e_id
+        left join   recruitment_info ri on eh.ehr_id=ri.ehrid
+        where e_id=#{e_id}
+
+    </select>
+    <select id="getHrCompanyById" resultMap="CompanyEntityMap">
+        select  eh.*,ei.*
+        from enterprise_info  ei
+        left JOIN   enterprise_hr eh  on eh.enterprise_id=ei.e_id
+        where e_id=#{e_id}
+
+    </select>
+
+
+
+</mapper>

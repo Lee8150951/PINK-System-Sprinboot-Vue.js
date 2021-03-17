@@ -1,0 +1,13 @@
+.main-body {
+  padding: 0 35px;
+}
+.header-title {
+  padding: 28px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4c4c64;
+}
+.main {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}

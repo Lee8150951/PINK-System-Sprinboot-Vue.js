@@ -1,0 +1,15 @@
+html, body {
+  height: 100%;
+}
+.background {
+  background-color: #f5f6fa;
+  height: 100%;
+}
+.login_head {
+  line-height: 200px;
+  text-align: center;
+}
+.register {
+  height: 60px;
+  width: 150px;
+}

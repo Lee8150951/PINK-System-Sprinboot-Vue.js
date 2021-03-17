@@ -1,0 +1,39 @@
+.annex-panel {
+  background-color: #fff;
+  padding: 20px 20px;
+  font-size: 14px;
+  font-weight: lighter;
+}
+.annex-title {
+  text-align: left;
+}
+.annex-btn {
+  margin: 6px 0;
+  padding: 8px 38%;
+  border-radius: 0;
+}
+.annex-buttons {
+  margin-top: 10px;
+}
+.right-bg {
+  width: 75%;
+}
+.occupy {
+  min-height: 10px;
+}
+.left-up {
+  text-align: center;
+}
+.right-up {
+  text-align: center;
+}
+.upload-btn-col {
+  margin-top: 15px;
+}
+.upload-btn {
+  width: 300px;
+  border-radius: 0;
+}
+.btn-content {
+  text-align: center;
+}

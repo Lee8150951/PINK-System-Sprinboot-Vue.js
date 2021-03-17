@@ -1,0 +1,29 @@
+.chat-target {
+  padding: 10px 20px 10px 20px;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+.avatar-img {
+  border-radius: 3px;
+  width: 45px;
+}
+.chat-name {
+  font-size: 14px;
+  padding: 3px 0;
+  color: #4c4c64;
+}
+.chat-content {
+  font-weight: lighter;
+  font-size: 13px;
+  color: #939393;
+}
+.delete {
+  text-align: right;
+  line-height: 42px;
+  color: #939393;
+  opacity: 0;
+  transition: 0.3s;
+}
+.delete-span {
+  cursor: pointer;
+}

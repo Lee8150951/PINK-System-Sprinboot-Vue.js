@@ -1,0 +1,10 @@
+.avatar {
+  border-radius: 50%;
+  width: 40px;
+}
+.popover {
+  padding: 6px;
+  text-align: left;
+  transition: 0.3s;
+  cursor: pointer;
+}
