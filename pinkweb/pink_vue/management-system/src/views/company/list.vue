@@ -227,44 +227,46 @@ export default {
 
     },
     submit() {
+
       const that=this;
-      console.log(this.form)
-       this.$http.post('http://localhost:8085/company/list/insertUser',{
-         name:this.form.name,
-         phone:this.form.phone,
-         password:this.form.password,
-         sex:this.form.sex,
+      this.$http.post('http://localhost:8085/company/list/insertUser',{
+        name:this.form.name,
+        phone:this.form.phone,
+        password:this.form.password,
+        sex:this.form.sex,
 
-       })
-      .then(function(response) {
-         that.form.id=response.data.id;
-         console.log(that.form.id);
-         that.$http.post('http://localhost:8085/company/profile/'+that.ea_id)
-        .then(function(response) {
-            console.log(response.data);
-            that.enterprise_id=response.data.e_id
-            console.log(that.enterprise_id);
-      });
-         that.$http.post('http://localhost:8085/company/list/insertCompanyHr',{
-           enterprise_id:that.enterprise_id,
-           ehr_id:that.form.id,
-           ehr_position:that.form.ehr_position,
-           ehr_jobnum:that.form.ehr_jobnum
-
-       })
-        .then(function(response) {
-            console.log(response.data);
       })
-      .catch(function (error) {
-        console.log(error)
-      });
-      })
-      .catch(function (error) {
-        console.log(error)
-      });
+        .then(function(response) {
+          const v = that
+          that.form.id=response.data.id;
+
+          that.$http.post('http://localhost:8085/company/profile/'+localStorage.getItem("ea_id"))
+            .then(function(response) {
+              console.log("获取公司id");
+              v.enterprise_id=response.data.e_id
+
+              that.$http.post('http://localhost:8085/company/list/insertCompanyHr',{
+                enterprise_id:v.enterprise_id,
+                ehr_id:v.form.id,
+                ehr_position:v.form.ehr_position,
+                ehr_jobnum:v.form.ehr_jobnum
+
+              })
+                .then(function(response) {
+                  console.log("新建HR");
+                })
+                .catch(function (error) {
+                  console.log(error)
+                });
+            });
 
 
-      console.log(this.form)
+        })
+        .catch(function (error) {
+          console.log(error)
+        });
+      this.addVisible = false
+      //location.reload()
     }
   }
 }

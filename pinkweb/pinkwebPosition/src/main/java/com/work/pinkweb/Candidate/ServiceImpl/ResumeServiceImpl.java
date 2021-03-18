@@ -73,8 +73,8 @@ public class ResumeServiceImpl implements ResumeService {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         System.out.println(user.getBirthday());
         //替换段落标签
-        String[] info_flag=   {"name","position","birthday","sex","phone","email","edu1start","edu1school","edu1subject","edu2start","edu2school","edu2subject","wor1start","wor1last","wor1company","wor1position","wor1duty","wor2start","wor2last","wor2company","wor2position","wor2duty","selfIntroduction"};
-        String[] info_addr= {user.getName(),"java工程师",sdf.format(user.getBirthday()),sex,user.getPhone(),user.getEmail(),sdf.format(candidate.getC_ftime()),candidate.getC_fschool(),candidate.getC_fmajor(),sdf.format(candidate.getC_stime()),candidate.getC_sschool(),candidate.getC_smajor(),sdf.format(candidate.getC_finternship_stime()),sdf.format(candidate.getC_finternship_etime())
+        String[] info_flag=   {"name","position","birthday","sex","phone","email","edu1start","edu1last","edu1school","edu1subject","edu2start","edu2last","edu2school","edu2subject","wor1start","wor1last","wor1company","wor1position","wor1duty","wor2start","wor2last","wor2company","wor2position","wor2duty","selfIntroduction"};
+        String[] info_addr= {user.getName(),"java工程师",sdf.format(user.getBirthday()),sex,user.getPhone(),user.getEmail(),sdf.format(candidate.getC_ftime()),sdf.format(candidate.getC_stime()),candidate.getC_fschool(),candidate.getC_fmajor(),sdf.format(candidate.getC_stime()),sdf.format(candidate.getC_stime()),candidate.getC_sschool(),candidate.getC_smajor(),sdf.format(candidate.getC_finternship_stime()),sdf.format(candidate.getC_finternship_etime())
                 ,candidate.getC_finternship_enterprise(),candidate.getC_finternship_job(),"下载后填写",sdf.format(candidate.getC_sinternship_stime()),sdf.format(candidate.getC_sinternship_etime()),candidate.getC_sinternship_enterprise(),candidate.getC_sinternship_job(),"下载后填写",candidate.getC_intro()};
         for(int i=0;i<info_flag.length;i++) {
             parametersMap.put(info_flag[i], info_addr[i]);
@@ -83,7 +83,7 @@ public class ResumeServiceImpl implements ResumeService {
         parametersMap.put("outputTime", df.format(new Date()));
 
         //替换段落图片
-        String[] pic_flag=   {"avator.jpg"};
+        String[] pic_flag=   {"avator"};
         String[] pic_addr= {"file\\avator.jpg"};
         for(int i=0;i<pic_flag.length;i++) {
             parametersMap.put(pic_flag[i], pic_addr[i]);
